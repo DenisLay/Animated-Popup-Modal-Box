@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Popup Modal Box</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <section>
+        <div class="profile">
+            <div class="profile-img">
+                <div class="img"></div>
+            </div>
+            <span class="name">John Doe</span>
+            <span class="profession">Web & Web Designer</span>
+            <div class="button hireBtn">
+                <i class="bx bxs-envelope"></i>
+                <button>Hire me</button>
+            </div>
+        </div>
+
+        <div class="popup-outer">
+            <div class="popup-box">
+                <i class="bx bx-x close"></i>
+                <div class="profile-text">
+                    <div class="img"></div>
+                    <div class="text">
+                        <span class="name">John Doe</span>
+                        <span class="profession">Web & Web Designer</span>
+                    </div>
+                </div>
+                <form action="#">
+                    <textarea placeholder="Enter your message"></textarea>
+                    <div class="button">
+                        <button class="cancel">Cancel</button>
+                        <button class="send">Send</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>

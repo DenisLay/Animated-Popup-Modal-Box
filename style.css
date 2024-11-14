@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+section {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section .profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+section.show .profile {
+    display: none;
+}
+
+section.show 
+
+section .profile .profile-img {
+    margin-bottom: 10px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background: #4070f4;
+    padding: 2px;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    background: rgb(179, 1, 233);
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+.profile .name,
+.profile .profession {
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+}
+
+.profile .profession {
+    font-weight: 400;
+    margin-top: -6px;
+}
+
+.profile .button {
+    padding: 12px 20px;
+    background-color: #4070f4;
+    margin-top: 15px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.profile .button:hover {
+    background-color: #275df1;
+}
+
+.profile .button:active {
+    scale: 0.93;
+}
+
+.profile .button i {
+    color: #fff;
+    font-size: 18px;
+}
+
+.profile .button button {
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    cursor: pointer;
+}
+
+section .popup-outer {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s 0s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+section.show .popup-outer {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+section .popup-box {
+    position: relative;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    width: 100%;
+    max-width: 380px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    transform: scale(1.2);
+    transition: opacity 0.2s 0s cubic-bezier(0.215, 0.610, 0.355, 1),
+                transform 0.2s 0s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+section.show .popup-box {
+    transform: scale(1);
+}
+
+.popup-box .close {
+    font-size: 24px;
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    color: #b4b4b4;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.popup-box .close:hover {
+    color: #333;
+}
+
+section .popup-box .profile-text {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+section .popup-box .img {
+    height: 60px;
+    width: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.profile-text .text {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-text .text .name {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.profile-text .text .profession {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+section .popup-box textarea {
+    min-height: 140px;
+    width: 100%;
+    margin-top: 20px;
+    outline: none;
+    border: 1px solid #ddd;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    resize: none;
+    font-weight: 500;
+    background-color: #f3f3f3;
+}
+
+section .popup-box .button {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+    gap: 8px;
+}
+
+section .popup-box .button > * {
+    outline: none;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    color: #fff;
+    background-color: #6f93f6;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+section .popup-box .button .cancel {
+    background-color: #f082ac;
+}
+
+section .popup-box .button .cancel:hover {
+    background-color: #ec5f95;
+}
+
+section .popup-box .button .send:hover {
+    background-color: #275df1;
+}
